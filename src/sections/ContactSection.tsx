@@ -1,12 +1,14 @@
 export function ContactSection() {
   return (
-    <section className="contact-banner" id="contacto">
-      <div className="contact-banner-copy">
-        <h2>Si llegaste hasta aquí,<br />probablemente <strong>tienes algo que contarnos.</strong></h2>
-        <p>Nos encantará poner nuestras tres piezas en juego.</p>
+    <section className="contact-section" id="contacto">
+      <div className="contact-banner">
+        <div className="contact-banner-copy">
+          <h2>Si llegaste hasta aquí,<br />probablemente <strong>tienes algo que contarnos.</strong></h2>
+          <p>Nos encantará poner nuestras tres piezas en juego.</p>
+        </div>
+        <a className="button button-light" href="mailto:hola@kanarostudio.com">Agendemos una reunión</a>
+        <img className="contact-texture" src="/assets/impact-section.png" alt="" />
       </div>
-      <a className="button button-light" href="mailto:hola@kanarostudio.com">Agendemos una reunión</a>
-      <img className="contact-texture" src="/assets/impact-section.png" alt="" />
     </section>
   );
 }

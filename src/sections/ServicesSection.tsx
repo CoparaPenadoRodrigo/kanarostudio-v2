@@ -14,12 +14,12 @@ export function ServicesSection() {
         <p className="section-summary">Las piezas que hacen que una idea cobre vida.</p>
       </div>
       <div className="service-grid">
-        {services.map(({ title, icon, description, featured }) => (
+        {services.map(({ title, icon, description, featured, cta }) => (
           <article className={`service-card${featured ? ' service-featured' : ''}`} key={title}>
             <span className="service-icon"><img src={`/assets/${icon}`} alt="" /></span>
             <h3>{title}</h3>
             <p>{description}</p>
-            <SectionLink to={routes.contacto}>Hablemos <img src="/assets/arrow-small.svg" alt="" /></SectionLink>
+            <SectionLink to={routes.contacto}>{cta} <img src="/assets/arrow-small.svg" alt="" /></SectionLink>
           </article>
         ))}
       </div>

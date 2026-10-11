@@ -47,37 +47,57 @@ export const steps = [
 ];
 
 export const frictionPoints = [
-  'Tu negocio tiene valor, pero visualmente no lo representa.',
-  'Te buscan en Google y no encuentran nada sobre ti.',
-  'Sabes muchísimo de lo que haces, pero no lo estás mostrando.',
-  'Sigues perdiendo tiempo en cosas que podrían funcionar solas.',
-  'Tienes una idea para tu negocio, pero no sabes cómo hacerla realidad.',
+  {
+    problem: 'Tu negocio tiene valor, pero visualmente no lo representa.',
+    recommendation: 'Entonces lo que necesitas es un Branding.',
+  },
+  {
+    problem: 'Te buscan en Google y no encuentran nada sobre ti.',
+    recommendation: 'Entonces lo que necesitas es una web que te haga visible.',
+  },
+  {
+    problem: 'Sabes muchísimo de lo que haces, pero no lo estás mostrando.',
+    recommendation: 'Entonces lo que necesitas es contenido que muestre lo que sabes.',
+  },
+  {
+    problem: 'Sigues perdiendo tiempo en cosas que podrían funcionar solas.',
+    recommendation: 'Entonces lo que necesitas es automatizar esos procesos.',
+  },
+  {
+    problem: 'Tienes una idea para tu negocio, pero no sabes cómo hacerla realidad.',
+    recommendation: 'Entonces lo que necesitas es una estrategia para hacerla realidad.',
+  },
 ];
 
 export const services = [
   {
     title: 'Branding y diseño de marca',
+    cta: 'Quiero construir mi marca',
     icon: 'compass.svg',
     description: 'Construimos la identidad de tu marca desde la estrategia hasta lo visual: definimos cómo quieres ser percibido y lo convertimos en una identidad clara, coherente y reconocible.',
     featured: true,
   },
   {
     title: 'Diseño y desarrollo web',
+    cta: 'Quiero crear mi web',
     icon: 'layers.svg',
     description: 'Diseñamos y desarrollamos páginas web pensadas para representar el valor de tu negocio, comunicar lo que haces y convertir visitas en oportunidades.',
   },
   {
     title: 'Landing Page',
+    cta: 'Quiero crear mi landing',
     icon: 'code.svg',
     description: 'Diseñamos landing pages enfocadas en un objetivo: presentar tu oferta, captar contactos, generar registros, vender o llevar a tu audiencia hacia una acción concreta.',
   },
   {
     title: 'Social Media y contenido en redes sociales',
+    cta: 'Quiero crear contenido',
     icon: 'compass.svg',
     description: 'Transformamos lo que sabes, haces y quieres comunicar en una estrategia de contenido que construye presencia, conecta con tu audiencia y muestra el valor de tu marca.',
   },
   {
     title: 'AUTOMATIZACIONES - SISTEMAS',
+    cta: 'Quiero optimizar un proceso',
     icon: 'trending.svg',
     description: 'Diseñamos automatizaciones, sistemas y soluciones digitales que simplifican procesos, organizan información y hacen que tareas que hoy dependen de ti puedan funcionar de manera más eficiente y solas.',
   },
