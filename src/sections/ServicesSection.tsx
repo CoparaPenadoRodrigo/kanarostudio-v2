@@ -9,6 +9,7 @@ export function ServicesSection() {
         <div>
           <SectionLabel>Qué hacemos</SectionLabel>
           <h2 id="services-title">Así es como podemos ayudarte.</h2>
+          <p>Estos son los servicios que hacen que una idea cobre vida.</p>
         </div>
         <p className="section-summary">Las piezas que hacen que una idea cobre vida.</p>
       </div>

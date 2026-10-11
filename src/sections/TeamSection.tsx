@@ -20,7 +20,7 @@ export function TeamSection() {
         <h2 id="team-title"><em>Nos gusta conectar</em> lo que otros suelen separar.</h2>
         <p>La estrategia con el diseño.<br />El diseño con la tecnología.<br />La creatividad con lo que necesita funcionar.</p>
         <p>Somos Karla, Nathalie y Rodrigo.</p>
-        <p className="team-note">Y Kanaro es el lugar donde nuestras tres formas de pensar se encuentran para construir algo que ninguna de las tres podría construir por separado.</p>
+        <p className="team-note">Y juntos somos Kanaro, un estudio boutique creativo en Lima donde estrategia, diseño y tecnología trabajan juntas para convertir ideas en experiencias y soluciones que funcionan.</p>
       </div>
       <div className="team-orbit" aria-label="Karla, Nathalie y Rodrigo, el equipo de Kanaro">
         {rings.map(([image, className]) => <img className={`ring ${className}`} src={`/assets/${image}`} alt="" key={image} />)}

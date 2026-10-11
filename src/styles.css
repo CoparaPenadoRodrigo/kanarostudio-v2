@@ -43,39 +43,88 @@ a {
 }
 
 .site-header {
-	min-height: 84px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	min-height: 80px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 28px;
-	padding: 20px max(5.55vw, 28px);
+	gap: 24px;
+	padding: 14px max(5.55vw, 28px);
+	border-bottom: 1px solid transparent;
 	background: #fff;
+	transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.site-header.is-scrolled {
+	border-bottom-color: #ffffffa6;
+	background: #ffffffbd;
+	box-shadow: 0 10px 30px #2514360d;
+	-webkit-backdrop-filter: blur(18px) saturate(150%);
+	backdrop-filter: blur(18px) saturate(150%);
 }
 
 .brand {
 	display: block;
-	flex: 0 0 250px;
+	flex: 0 0 210px;
 }
 
 .brand img {
-	width: 250px;
+	width: 210px;
 	height: auto;
 }
 
 .main-nav {
 	display: flex;
 	justify-content: center;
-	gap: 32px;
-	color: var(--muted);
+	align-items: center;
+	gap: clamp(18px, 2.5vw, 36px);
+	color: #57535f;
 	font-size: 14px;
+	font-weight: 500;
+	white-space: nowrap;
 }
 
 .main-nav a {
+	position: relative;
+	padding: 9px 0;
 	transition: color 160ms ease;
 }
 
-.main-nav a:hover {
+.main-nav a::after {
+	position: absolute;
+	right: 0;
+	bottom: 2px;
+	left: 0;
+	height: 2px;
+	border-radius: 2px;
+	background: var(--orange);
+	content: '';
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 160ms ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.main-nav a[aria-current='page'] {
 	color: var(--orange);
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after,
+.main-nav a[aria-current='page']::after {
+	transform: scaleX(1);
+}
+
+.site-header a:focus-visible {
+	outline: 2px solid var(--orange);
+	outline-offset: 4px;
+}
+
+section[id] {
+	scroll-margin-top: 100px;
 }
 
 .button {
@@ -867,11 +916,11 @@ p {
 @media (max-width: 1100px) {
 	.brand,
 	.brand img {
-		width: 205px;
+		width: 185px;
 	}
 
 	.brand {
-		flex-basis: 205px;
+		flex-basis: 185px;
 	}
 
 	.site-header {
@@ -900,9 +949,11 @@ p {
 
 @media (max-width: 760px) {
 	.site-header {
-		min-height: 72px;
+		min-height: 108px;
 		flex-wrap: wrap;
-		padding: 16px 20px;
+		column-gap: 12px;
+		row-gap: 3px;
+		padding: 10px 20px 8px;
 	}
 
 	.brand,
@@ -915,8 +966,8 @@ p {
 	}
 
 	.site-header .button {
-		min-height: 40px;
-		padding: 9px 15px;
+		min-height: 38px;
+		padding: 8px 14px;
 		font-size: 12px;
 	}
 
@@ -924,9 +975,13 @@ p {
 		order: 3;
 		width: 100%;
 		justify-content: flex-start;
-		gap: 22px;
+		gap: clamp(16px, 5vw, 28px);
 		overflow-x: auto;
-		padding: 5px 0 2px;
+		padding: 1px 0 2px;
+	}
+
+	section[id] {
+		scroll-margin-top: 120px;
 	}
 
 	.hero {
@@ -1217,4 +1272,15 @@ p {
 	}
 
 
+}
+
+@media (max-width: 360px) {
+	.brand,
+	.brand img {
+		width: 132px;
+	}
+
+	.brand {
+		flex-basis: 132px;
+	}
 }

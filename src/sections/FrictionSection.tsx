@@ -6,7 +6,7 @@ export function FrictionSection() {
     <section className="friction" aria-labelledby="friction-title">
       <div className="friction-inner">
         <img className="thinking-face" src="/assets/thinking-face.png" alt="" />
-        <h2 id="friction-title">¿Te ha pasado que <em>sientes que…</em></h2>
+        <h2 id="friction-title">¿Te ha pasado que sientes que…</h2>
         <ul>
           {frictionPoints.map((point) => <li key={point}>❌ {point}</li>)}
         </ul>

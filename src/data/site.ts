@@ -56,30 +56,30 @@ export const frictionPoints = [
 
 export const services = [
   {
-    title: 'Branding',
+    title: 'Branding y diseño de marca',
     icon: 'compass.svg',
-    description: 'Construimos la identidad de tu marca desde la estrategia hasta lo visual: definimos cómo quieres ser percibido y lo convertimos en una identidad que te represente.',
+    description: 'Construimos la identidad de tu marca desde la estrategia hasta lo visual: definimos cómo quieres ser percibido y lo convertimos en una identidad clara, coherente y reconocible.',
     featured: true,
   },
   {
-    title: 'Página Web',
+    title: 'Diseño y desarrollo web',
     icon: 'layers.svg',
-    description: 'Diseñamos y desarrollamos el espacio digital de tu negocio para que puedas contar quién eres, mostrar lo que haces y conectar con tus clientes.',
+    description: 'Diseñamos y desarrollamos páginas web pensadas para representar el valor de tu negocio, comunicar lo que haces y convertir visitas en oportunidades.',
   },
   {
     title: 'Landing Page',
     icon: 'code.svg',
-    description: 'Creamos una página enfocada en un solo objetivo: presentar una oferta, captar contactos, vender o llevar a tu audiencia a tomar una acción.',
+    description: 'Diseñamos landing pages enfocadas en un objetivo: presentar tu oferta, captar contactos, generar registros, vender o llevar a tu audiencia hacia una acción concreta.',
   },
   {
-    title: 'Social Media',
+    title: 'Social Media y contenido en redes sociales',
     icon: 'compass.svg',
-    description: 'Convertimos lo que sabes, haces y tienes para contar en contenido que conecta con tu audiencia y muestra el valor de tu marca.',
+    description: 'Transformamos lo que sabes, haces y quieres comunicar en una estrategia de contenido que construye presencia, conecta con tu audiencia y muestra el valor de tu marca.',
   },
   {
-    title: 'Automatizaciones / Sistemas',
+    title: 'AUTOMATIZACIONES - SISTEMAS',
     icon: 'trending.svg',
-    description: 'Convertimos procesos repetitivos o complicados en sistemas que hacen el trabajo por ti, desde automatizaciones hasta herramientas personalizadas e integraciones.',
+    description: 'Diseñamos automatizaciones, sistemas y soluciones digitales que simplifican procesos, organizan información y hacen que tareas que hoy dependen de ti puedan funcionar de manera más eficiente y solas.',
   },
 ];
 
