@@ -7,27 +7,33 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-main">
         <div className="footer-brand-block">
-          <span>Somos Kanaro Studio</span>
-          <h2>Háblanos de <em>tu proyecto</em></h2>
+          <span>SOMOS KANARO</span>
+          <h2>Trabajemos<br /><em>juntos</em></h2>
+        </div>
+        <div className="footer-column">
+          <h3>Servicios</h3>
+          {[
+            'Branding',
+            'Social Media y contenido',
+            'Flujo de infoproducto',
+            'Web · Landing · E-commerce',
+            'Sistemas y automatizaciones',
+          ].map((label) => <SectionLink key={label} to={routes.servicios}>{label}</SectionLink>)}
         </div>
         <div className="footer-column">
           <h3>Explorar</h3>
           {footerNavigation.map(({ label, to }) => <SectionLink key={label} to={to}>{label}</SectionLink>)}
         </div>
         <div className="footer-column">
-          <h3>Contáctanos</h3>
-          <a href="mailto:hola@kanarostudio.com">Correo</a>
-          <a href="tel:+51999999999">Número contacto</a>
+          <h3>Hablemos</h3>
+          <a href="mailto:contacto@kanarostudio.com">contacto@kanarostudio.com</a>
+          <a href="tel:+51992934447">+51 992 934 447</a>
+          <span>Lima Perú</span>
         </div>
-        <form className="subscribe" action="mailto:hola@kanarostudio.com" method="post" encType="text/plain">
-          <label htmlFor="email">Suscribir</label>
-          <p>Recibe noticias sobre nuestros últimos proyectos y actualizaciones del estudio.</p>
-          <div className="subscribe-field">
-            <input id="email" name="correo" type="email" placeholder="Correo" required />
-            <button type="submit" aria-label="Suscribirme"><img src="/assets/footer-arrow.svg" alt="" /></button>
-          </div>
-          <small>Al suscribirte aceptas nuestra política de privacidad y consientes recibir comunicaciones de Kanaro Studio.</small>
-        </form>
+        <div className="footer-idea-card">
+          <h3>¿Tienes algo en mente?</h3>
+          <p>Cuéntanos qué quieres construir y encontraremos la mejor forma de hacerlo realidad.</p>
+        </div>
       </div>
       <div className="footer-bottom">
         <p>© 2026 Kanaro Studio. Todos los derechos reservados.</p>

@@ -47,6 +47,7 @@ export function App() {
         <Route path={routes.servicios} element={<RoutedHome />} />
         <Route path={routes.equipo} element={<RoutedHome />} />
         <Route path={routes.proyectos} element={<RoutedHome />} />
+        <Route path={routes.preguntasFrecuentes} element={<RoutedHome />} />
         <Route path={routes.contacto} element={<RoutedHome />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

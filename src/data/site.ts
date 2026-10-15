@@ -3,6 +3,7 @@ export const routes = {
   servicios: '/servicios',
   equipo: '/equipo',
   proyectos: '/proyectos',
+  preguntasFrecuentes: '/preguntas-frecuentes',
   contacto: '/contacto',
 } as const;
 
@@ -12,12 +13,13 @@ export const navigation = [
   { label: 'Portafolio', to: routes.proyectos },
 ];
 
-export const footerNavigation = [
+export const footerNavigation: { label: string; to: string }[] = [
   { label: 'Inicio', to: routes.inicio },
   { label: 'Servicios', to: routes.servicios },
-  { label: 'Portafolio', to: routes.proyectos },
+  { label: 'Nosotros', to: routes.equipo },
+  { label: 'Proyectos', to: routes.proyectos },
+  { label: 'Preguntas Frecuentes', to: routes.preguntasFrecuentes },
   { label: 'Contacto', to: routes.contacto },
-  { label: 'Recursos', to: routes.equipo },
 ];
 
 export const clients = ['Google', 'Slack', 'Airbnb', 'Shopify', 'Dropbox', 'Webflow'];
