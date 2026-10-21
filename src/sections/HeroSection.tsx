@@ -14,9 +14,6 @@ export function HeroSection() {
           <SectionLink className="button" to={routes.contacto}>
             Hablemos de tu proyecto <img src="/assets/arrow-right.svg" alt="" />
           </SectionLink>
-          <SectionLink className="showreel" to={routes.proyectos}>
-            <span className="play-button"><img src="/assets/play.svg" alt="" /></span>
-          </SectionLink>
         </div>
       </div>
       <div className="hero-art" aria-hidden="true">

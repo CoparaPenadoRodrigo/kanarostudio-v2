@@ -77,7 +77,6 @@ export const services = [
     cta: 'Quiero construir mi marca',
     icon: 'compass.svg',
     description: 'Construimos la identidad de tu marca desde la estrategia hasta lo visual: definimos cómo quieres ser percibido y lo convertimos en una identidad clara, coherente y reconocible.',
-    featured: true,
   },
   {
     title: 'Diseño y desarrollo web',
@@ -94,7 +93,7 @@ export const services = [
   {
     title: 'Social Media y contenido en redes sociales',
     cta: 'Quiero crear contenido',
-    icon: 'compass.svg',
+    icon: 'social-media.svg',
     description: 'Transformamos lo que sabes, haces y quieres comunicar en una estrategia de contenido que construye presencia, conecta con tu audiencia y muestra el valor de tu marca.',
   },
   {
@@ -103,12 +102,6 @@ export const services = [
     icon: 'trending.svg',
     description: 'Diseñamos automatizaciones, sistemas y soluciones digitales que simplifican procesos, organizan información y hacen que tareas que hoy dependen de ti puedan funcionar de manera más eficiente y solas.',
   },
-];
-
-export const team = [
-  { name: 'Karla', shortName: 'Ka', image: 'team-karla.png', className: 'person-karla', description: 'Convierte ideas en palabras que tienen algo que decir.' },
-  { name: 'Nathalie', shortName: 'Na', image: 'team-nathalie.png', className: 'person-nathalie', description: 'Convierte ideas en experiencias que puedes ver y sentir.' },
-  { name: 'Rodrigo', shortName: 'Ro', image: 'team-rodrigo.png', className: 'person-rodrigo', description: 'Convierte ideas en soluciones que funcionan.' },
 ];
 
 export const projects = [

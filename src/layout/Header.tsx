@@ -6,6 +6,7 @@ import { navigation, routes } from '../data/site';
 export function Header() {
   const { pathname } = useLocation();
   const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 12);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateScroll = () => setIsScrolled(window.scrollY > 12);
@@ -14,17 +15,43 @@ export function Header() {
     return () => window.removeEventListener('scroll', updateScroll);
   }, []);
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMenuOpen(false);
+    };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [isMenuOpen]);
+
   return (
-    <header className={`site-header${isScrolled ? ' is-scrolled' : ''}`}>
-      <SectionLink className="brand" to={routes.inicio} aria-label="Kanaro Studio, inicio">
+    <header className={`site-header${isScrolled ? ' is-scrolled' : ''}${isMenuOpen ? ' menu-open' : ''}`}>
+      <SectionLink className="brand" to={routes.inicio} aria-label="Kanaro Studio, inicio" onClick={() => setIsMenuOpen(false)}>
         <img src="/kanarostudio_logo.webp" alt="Kanaro Studio" />
       </SectionLink>
-      <nav className="main-nav" aria-label="Navegación principal">
+      <button
+        className="menu-toggle"
+        type="button"
+        aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+        aria-controls="main-navigation"
+        aria-expanded={isMenuOpen}
+        onClick={() => setIsMenuOpen((open) => !open)}
+      >
+        <span aria-hidden="true" />
+      </button>
+      <nav className="main-nav" id="main-navigation" aria-label="Navegación principal">
         {navigation.map(({ label, to }) => (
-          <SectionLink key={to} to={to} aria-current={pathname === to ? 'page' : undefined}>
+          <SectionLink key={to} to={to} aria-current={pathname === to ? 'page' : undefined} onClick={() => setIsMenuOpen(false)}>
             {label}
           </SectionLink>
         ))}
+        <SectionLink className="mobile-nav-contact" to={routes.contacto} onClick={() => setIsMenuOpen(false)}>
+          Contáctanos
+        </SectionLink>
       </nav>
       <SectionLink className="button button-small" to={routes.contacto}>
         Contáctanos <img src="/assets/arrow-right.svg" alt="" />

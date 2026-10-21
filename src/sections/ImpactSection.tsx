@@ -11,7 +11,8 @@ export function ImpactSection() {
       </div>
 
       <div className="impact-grid">
-        <div className="impact-image" role="img" aria-label="Equipo de Kanaro trabajando en un proyecto">
+        <div className="impact-image">
+          <img className="impact-photo" src="/assets/team_kanaroStudio.webp" alt="Equipo de Kanaro trabajando en un proyecto" />
           <div className="floating-note">
             <span>Somos Kanaro</span>
             <strong>Tu equipo completo</strong>
