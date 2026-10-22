@@ -15,7 +15,7 @@ export function ProjectsSection() {
       <div className="projects-heading">
         <SectionLabel>Ideas que ya cobraron vida <img src="/assets/section-dot.svg" alt="" /></SectionLabel>
         <h2 id="projects-title">NUESTRO TRABAJO </h2>
-        <p>Proyectos de branding, contenido, paginas webs, landings pages y y soluciones digitales  que hemos construido junto a nuestros clientes.</p>
+        <p>Proyectos de branding, contenido, páginas web, landing pages y soluciones digitales que hemos construido junto a nuestros clientes.</p>
       </div>
       <div className="project-grid">
         {projects.map((project) => (
@@ -26,7 +26,7 @@ export function ProjectsSection() {
             aria-label={`Ampliar proyecto ${project.id}`}
             onClick={() => setActiveProject(project)}
           >
-            <img src={project.image} alt={project.alt} />
+            <img src={project.image} alt={project.alt} width="615" height="501" loading="lazy" decoding="async" />
           </button>
         ))}
       </div>

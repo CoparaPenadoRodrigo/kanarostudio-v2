@@ -9,7 +9,7 @@ import { TeamSection } from '../sections/TeamSection';
 
 export function HomePage() {
   return (
-    <main>
+    <main id="contenido">
       <HeroSection />
       <ImpactSection />
       <FrictionSection />

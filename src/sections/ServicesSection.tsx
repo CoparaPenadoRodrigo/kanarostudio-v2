@@ -20,7 +20,7 @@ export function ServicesSection() {
   const trackRef = useRef<HTMLDivElement>(null);
   const scrollTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  function scrollToCard(position: number, behavior: ScrollBehavior = 'smooth') {
+  function scrollToCard(position: number, behavior: ScrollBehavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') {
     const track = trackRef.current;
     const firstCard = track?.children[0] as HTMLElement | undefined;
     const card = track?.children[position] as HTMLElement | undefined;

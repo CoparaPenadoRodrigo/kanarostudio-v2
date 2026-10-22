@@ -29,7 +29,7 @@ function RoutedHome() {
 function NotFound() {
   return (
     <SiteLayout>
-      <main className="not-found">
+      <main className="not-found" id="contenido">
         <h1>Página no encontrada</h1>
         <p>La dirección que buscas no existe.</p>
         <Link className="button" to={routes.inicio}>Volver al inicio</Link>

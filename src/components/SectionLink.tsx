@@ -13,10 +13,11 @@ export function SectionLink({ to, onClick, ...props }: SectionLinkProps) {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
     if (pathname === to) {
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
       if (to === '/') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior });
       } else {
-        document.getElementById(to.slice(1))?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById(to.slice(1))?.scrollIntoView({ behavior });
       }
     }
   }

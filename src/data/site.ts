@@ -122,9 +122,8 @@ export const projects = [
 ];
 
 export const socialLinks = [
-  { label: 'Facebook', icon: 'facebook.svg' },
-  { label: 'Instagram', icon: 'instagram.svg' },
-  { label: 'X', icon: 'x.svg' },
-  { label: 'LinkedIn', icon: 'linkedin.svg' },
-  { label: 'YouTube', icon: 'youtube.svg' },
+  { label: 'Facebook', icon: 'facebook.svg', href: 'https://www.facebook.com/profile.php?id=61595896134505' },
+  { label: 'Instagram', icon: 'instagram.svg', href: 'https://www.instagram.com/studio.kanaro/' },
+  { label: 'TikTok', icon: 'tiktok.svg', href: 'https://www.tiktok.com/@kanaro941?lang=es' },
+  { label: 'Gmail', icon: 'mail.svg', href: 'mailto:contacto@kanarostudio.com' },
 ];

@@ -13,7 +13,7 @@ export function TeamSection() {
           <p>Somos Karla, Nathalie y Rodrigo.</p>
         </div>
         <div className="team-image-wrap">
-          <img className="team-image" src="/assets/kanarostudio_team.webp" alt="Equipo de Kanaro" />
+          <img className="team-image" src="/assets/kanarostudio_team.webp" alt="Equipo de Kanaro" width="1392" height="1104" loading="lazy" decoding="async" />
         </div>
       </div>
       <p className="team-note">Y juntos somos Kanaro, un estudio boutique creativo en Lima donde estrategia, diseño y tecnología trabajan juntas para convertir ideas en experiencias y soluciones que funcionan.</p>

@@ -22,7 +22,7 @@ export function ImpactSection() {
 
       <div className="impact-grid">
         <div className="impact-image">
-          <img className="impact-photo" src="/assets/team_kanaroStudio.webp" alt="Equipo de Kanaro trabajando en un proyecto" />
+          <img className="impact-photo" src="/assets/team_kanaroStudio.webp" alt="Equipo de Kanaro trabajando en un proyecto" width="1098" height="780" loading="lazy" decoding="async" />
           <div className="floating-note">
             <span>Somos Kanaro</span>
             <strong>Tu equipo completo</strong>

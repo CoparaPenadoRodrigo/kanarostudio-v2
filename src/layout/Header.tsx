@@ -31,7 +31,7 @@ export function Header() {
   return (
     <header className={`site-header${isScrolled ? ' is-scrolled' : ''}${isMenuOpen ? ' menu-open' : ''}`}>
       <SectionLink className="brand" to={routes.inicio} aria-label="Kanaro Studio, inicio" onClick={() => setIsMenuOpen(false)}>
-        <img src="/kanarostudio_logo.webp" alt="Kanaro Studio" />
+        <img src="/kanarostudio_logo.webp" alt="Kanaro Studio" width="231" height="56" />
       </SectionLink>
       <button
         className="menu-toggle"

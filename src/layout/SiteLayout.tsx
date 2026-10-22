@@ -7,5 +7,5 @@ type SiteLayoutProps = {
 };
 
 export function SiteLayout({ children }: SiteLayoutProps) {
-  return <><Header />{children}<Footer /></>;
+  return <><a className="skip-link" href="#contenido">Saltar al contenido</a><Header />{children}<Footer /></>;
 }

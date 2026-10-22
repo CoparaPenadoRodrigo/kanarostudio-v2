@@ -41,10 +41,10 @@ export function Footer() {
         <SectionLink to={routes.contacto}>Términos de servicio</SectionLink>
         <SectionLink to={routes.contacto}>Configuración de cookies</SectionLink>
         <div className="social-links" aria-label="Redes sociales">
-          {socialLinks.map(({ label, icon }) => (
-            <SectionLink key={label} to={routes.contacto} aria-label={label}>
+          {socialLinks.map(({ label, icon, href }) => (
+            <a key={label} href={href} aria-label={label} target={href.startsWith('https:') ? '_blank' : undefined} rel={href.startsWith('https:') ? 'noopener noreferrer' : undefined}>
               <img src={`/assets/${icon}`} alt="" />
-            </SectionLink>
+            </a>
           ))}
         </div>
       </div>
