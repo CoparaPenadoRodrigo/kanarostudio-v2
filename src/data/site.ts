@@ -22,7 +22,15 @@ export const footerNavigation: { label: string; to: string }[] = [
   { label: 'Contacto', to: routes.contacto },
 ];
 
-export const clients = ['Google', 'Slack', 'Airbnb', 'Shopify', 'Dropbox', 'Webflow'];
+export const clients = [
+  { name: 'Agencia Startgo', image: new URL('../../img/agenciastartgo_kanarostudio.webp', import.meta.url).href },
+  { name: 'Club Deportivo El Golazo', image: new URL('../../img/clubdepotivoelgolazo_kanarostudio.png', import.meta.url).href },
+  { name: 'Keit Estética Spa', image: new URL('../../img/keitsteticaspa_kanarostudio.webp', import.meta.url).href },
+  { name: 'Leyder Núñez', image: new URL('../../img/leydernuñez_kanarostudio.webp', import.meta.url).href },
+  { name: 'Luisa Abanto Coach', image: new URL('../../img/luisabantocoach_kanarostudio.webp', import.meta.url).href },
+  { name: 'Mariluz Ingbrigtson', image: new URL('../../img/mariluzbrigtson_kanarostudio.webp', import.meta.url).href },
+  { name: 'Sommedics Gram', image: new URL('../../img/sommedicsgram_kanarostudio.webp', import.meta.url).href },
+];
 
 export const steps = [
   {
@@ -105,12 +113,12 @@ export const services = [
 ];
 
 export const projects = [
-  { image: 'project-01.png', alt: 'Proyecto creativo de Kanaro Studio' },
-  { image: 'project-02.png', alt: 'Proyecto de identidad visual de Kanaro Studio' },
-  { image: 'project-03.png', alt: 'Proyecto digital de Kanaro Studio' },
-  { image: 'project-04.png', alt: 'Diseño de marca realizado por Kanaro Studio' },
-  { image: 'project-05.png', alt: 'Proyecto visual de Kanaro Studio' },
-  { image: 'project-06.png', alt: 'Proyecto de diseño realizado por Kanaro Studio' },
+  { id: 1, image: new URL('../../img/luisabantocoach_web_kanarostudio.webp', import.meta.url).href, alt: 'Luis Abanto Coach confió en nosotros' },
+  { id: 2, image: new URL('../../img/keitsteticaspa_web_kanarostudio.webp', import.meta.url).href, alt: 'Keit Stética Spa confió en nosotros' },
+  { id: 3, image: new URL('../../img/mariluzbrigstone_web_kanarostudio.webp', import.meta.url).href, alt: 'Mariluz Brigstone confió en nosotros' },
+  { id: 4, image: new URL('../../img/mariacristina_brand_kanarostudio.webp', import.meta.url).href, alt: 'María Cristina confió en nosotros' },
+  { id: 5, image: new URL('../../img/anybekinpower_brand_kanarostudio.webp', import.meta.url).href, alt: 'Anybe Kinpower confió en nosotros' },
+  { id: 6, image: new URL('../../img/keitsteticaspa_brand_kanarostudio.webp', import.meta.url).href, alt: 'Keit Stética Spa confió en nosotros' },
 ];
 
 export const socialLinks = [

@@ -5,8 +5,18 @@ export function ImpactSection() {
     <section className="impact" aria-labelledby="impact-title">
       <div className="client-list">
         <p className="overline">Marcas que confiaron en nosotros</p>
-        <div className="client-logos" aria-label="Google, Slack, Airbnb, Shopify, Dropbox y Webflow">
-          {clients.map((client) => <span key={client}><img src="/assets/globe.svg" alt="" />{client}</span>)}
+        <div className="client-logos" aria-label="Marcas que confiaron en Kanaro Studio">
+          <div className="client-logos-track">
+            {[false, true].map((duplicate) => (
+              <div className="client-logos-group" key={String(duplicate)} aria-hidden={duplicate}>
+                {clients.map(({ name, image }) => (
+                  <div className="client-logo" key={name}>
+                    <img src={image} alt={duplicate ? '' : name} />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

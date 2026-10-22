@@ -335,25 +335,51 @@ p {
 }
 
 .client-logos {
+	overflow: hidden;
+}
+
+.client-logos-track {
+	display: flex;
+	width: max-content;
+	animation: client-marquee 35s linear infinite;
+}
+
+.client-logos:hover .client-logos-track {
+	animation-play-state: paused;
+}
+
+.client-logos-group {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	gap: 24px;
+	flex: none;
+	gap: 40px;
+	padding-right: 40px;
 }
 
-.client-logos span {
-	display: inline-flex;
+.client-logo {
+	display: flex;
+	width: 200px;
+	height: 100px;
 	align-items: center;
-	gap: 8px;
-	color: #a1a1a5;
-	font-size: 16px;
-	font-weight: 700;
-	opacity: 0.7;
+	justify-content: center;
+	flex: none;
 }
 
-.client-logos img {
-	width: 18px;
-	height: 18px;
+.client-logo img {
+	display: block;
+	max-width: 100%;
+	max-height: 82px;
+	object-fit: contain;
+}
+
+@keyframes client-marquee {
+	to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.client-logos { overflow-x: auto; }
+	.client-logos-track { animation: none; }
+	.client-logos-group[aria-hidden="true"] { display: none; }
 }
 
 .impact-grid {
@@ -950,7 +976,17 @@ p {
 	gap: 25px;
 }
 
+.project-card {
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	background: none;
+	cursor: zoom-in;
+}
+
 .project-grid img {
+	display: block;
 	width: 100%;
 	aspect-ratio: 409 / 334;
 	border-radius: 20px;
@@ -958,8 +994,53 @@ p {
 	transition: transform 220ms ease;
 }
 
-.project-grid img:hover {
+.project-card:hover img,
+.project-card:focus-visible img {
 	transform: translateY(-4px);
+}
+
+.project-card:focus-visible {
+	outline: 2px solid var(--pink);
+	outline-offset: 5px;
+}
+
+.project-lightbox {
+	max-width: calc(100vw - 32px);
+	max-height: calc(100dvh - 32px);
+	padding: 0;
+	border: 0;
+	border-radius: 16px;
+	background: #0e0031;
+	box-shadow: 0 24px 80px #0009;
+}
+
+.project-lightbox::backdrop {
+	background: #080018d9;
+}
+
+.project-lightbox > img {
+	display: block;
+	max-width: 100%;
+	max-height: calc(100dvh - 32px);
+	object-fit: contain;
+}
+
+.project-lightbox-close {
+	position: absolute;
+	z-index: 1;
+	top: 12px;
+	right: 12px;
+	display: grid;
+	width: 40px;
+	height: 40px;
+	place-items: center;
+	border: 0;
+	border-radius: 50%;
+	background: #fff;
+	color: #0e0031;
+	font-size: 28px;
+	line-height: 1;
+	cursor: pointer;
 }
 
 .faq-section {
@@ -1363,13 +1444,21 @@ p {
 	}
 
 	.client-logos {
-		justify-content: flex-start;
-		overflow-x: auto;
-		padding-bottom: 8px;
+		width: 100%;
 	}
 
-	.client-logos span {
-		flex: 0 0 auto;
+	.client-logos-group {
+		gap: 20px;
+		padding-right: 20px;
+	}
+
+	.client-logo {
+		width: 150px;
+		height: 80px;
+	}
+
+	.client-logo img {
+		max-height: 68px;
 	}
 
 	.impact-grid {
