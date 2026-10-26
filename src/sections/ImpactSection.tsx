@@ -3,7 +3,7 @@ import { clients, steps } from '../data/site';
 export function ImpactSection() {
   return (
     <section className="impact" aria-labelledby="impact-title">
-      <div className="client-list">
+      <div className="client-list" data-reveal>
         <p className="overline">Marcas que confiaron en nosotros</p>
         <div className="client-logos" aria-label="Marcas que confiaron en Kanaro Studio">
           <div className="client-logos-track">
@@ -21,7 +21,7 @@ export function ImpactSection() {
       </div>
 
       <div className="impact-grid">
-        <div className="impact-image">
+        <div className="impact-image" data-reveal>
           <img className="impact-photo" src="/assets/team_kanaroStudio.webp" alt="Equipo de Kanaro trabajando en un proyecto" width="1098" height="780" loading="lazy" decoding="async" />
           <div className="floating-note">
             <span>Somos Kanaro</span>
@@ -29,7 +29,7 @@ export function ImpactSection() {
             <i><b /></i>
           </div>
         </div>
-        <div className="impact-copy">
+        <div className="impact-copy" data-reveal>
           <div className="section-heading section-heading-dark">
             <span className="kicker">Nuestro team</span>
             <h2 id="impact-title">3 Piezas<br />Una forma <em>de construir</em></h2>

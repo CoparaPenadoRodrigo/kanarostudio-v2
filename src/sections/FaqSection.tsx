@@ -6,12 +6,12 @@ export function FaqSection() {
 
   return (
     <section className="faq-section" id="preguntas-frecuentes" aria-labelledby="faq-title">
-      <div className="faq-heading">
+      <div className="faq-heading" data-reveal>
         <h2 id="faq-title">Preguntas frecuentes</h2>
         <p>Cada proyecto es distinto, pero hay preguntas que casi siempre aparecen antes de trabajar juntos. Aquí respondemos las más importantes para ayudarte a saber por dónde empezar.</p>
       </div>
 
-      <div className="faq-list">
+      <div className="faq-list" data-reveal>
         {frequentlyAskedQuestions.map(({ question, paragraphs, whatsapp }, index) => {
           const isOpen = openIndex === index;
           const questionId = `faq-question-${index + 1}`;

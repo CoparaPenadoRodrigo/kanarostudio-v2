@@ -36,7 +36,7 @@ export function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2026 Kanaro Studio. Todos los derechos reservados.</p>
+        <p>© 2026 KanaroStudio. Todos los derechos reservados.</p>
         <SectionLink to={routes.contacto}>Privacidad</SectionLink>
         <SectionLink to={routes.contacto}>Términos de servicio</SectionLink>
         <SectionLink to={routes.contacto}>Configuración de cookies</SectionLink>

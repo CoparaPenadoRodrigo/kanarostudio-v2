@@ -40,7 +40,7 @@ export function FrictionSection() {
 
   return (
     <section className="friction" aria-labelledby="friction-title">
-      <div className="friction-inner">
+      <div className="friction-inner" data-reveal>
         <img className="thinking-face" src="/assets/thinking-face.png" alt="" />
         <h2 id="friction-title">¿Te ha pasado que sientes que…</h2>
         <ul>

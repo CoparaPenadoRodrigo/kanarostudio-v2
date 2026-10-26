@@ -77,7 +77,7 @@ export function ServicesSection() {
 
   return (
     <section className="services" id="servicios" aria-labelledby="services-title">
-      <div className="section-topline">
+      <div className="section-topline" data-reveal>
         <div>
           <SectionLabel>Qué hacemos</SectionLabel>
           <h2 id="services-title">Así es como podemos ayudarte.</h2>
@@ -85,7 +85,7 @@ export function ServicesSection() {
         </div>
         <p className="section-summary">Las piezas que hacen que una idea cobre vida.</p>
       </div>
-      <div className="service-carousel" role="region" aria-roledescription="carrusel" aria-label="Nuestros servicios">
+      <div className="service-carousel" role="region" aria-roledescription="carrusel" aria-label="Nuestros servicios" data-reveal>
         <div className="service-grid" ref={trackRef} onScroll={syncSelectedService}>
           {carouselItems.map(({ service: { title, icon, description, cta }, index, isClone }, position) => (
             <article
@@ -122,7 +122,7 @@ export function ServicesSection() {
           <button type="button" className="carousel-arrow" onClick={() => selectService(activeIndex + 1)} aria-label="Servicio siguiente">→</button>
         </div>
       </div>
-      <div className="services-closer">
+      <div className="services-closer" data-reveal>
         <p>Cuéntanos qué quieres construir.<br />Te ayudamos a encontrar <strong>la mejor forma de hacerlo realidad.</strong></p>
         <SectionLink className="button" to={routes.contacto}>Quiero contarles mi proyecto <img src="/assets/arrow-right.svg" alt="" /></SectionLink>
       </div>
