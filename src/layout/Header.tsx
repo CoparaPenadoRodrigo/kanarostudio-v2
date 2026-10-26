@@ -9,7 +9,13 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const updateScroll = () => setIsScrolled(window.scrollY > 12);
+    let wasScrolled = isScrolled;
+    const updateScroll = () => {
+      const nextScrolled = window.scrollY > 12;
+      if (nextScrolled === wasScrolled) return;
+      wasScrolled = nextScrolled;
+      setIsScrolled(nextScrolled);
+    };
     updateScroll();
     window.addEventListener('scroll', updateScroll, { passive: true });
     return () => window.removeEventListener('scroll', updateScroll);

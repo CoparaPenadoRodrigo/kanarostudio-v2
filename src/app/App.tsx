@@ -1,28 +1,31 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { BrowserRouter, Link, Navigate, Route, Routes, useLocation } from 'react-router';
 import { routes } from '../data/site';
 import { SiteLayout } from '../layout/SiteLayout';
 import { HomePage } from './HomePage';
 
-function RoutedHome() {
+function SectionScroll() {
   const { pathname } = useLocation();
+  const hasMounted = useRef(false);
 
   useEffect(() => {
+    const behavior = hasMounted.current && !window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto';
+    hasMounted.current = true;
     const scrollToSection = () => {
       if (pathname === routes.inicio) {
-        window.scrollTo({ top: 0, behavior: 'auto' });
+        window.scrollTo({ top: 0, behavior });
       } else {
-        document.getElementById(pathname.slice(1))?.scrollIntoView({ behavior: 'auto' });
+        document.getElementById(pathname.slice(1))?.scrollIntoView({ behavior });
       }
     };
     const frame = requestAnimationFrame(scrollToSection);
-    window.addEventListener('load', scrollToSection, { once: true });
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener('load', scrollToSection);
-    };
+    return () => cancelAnimationFrame(frame);
   }, [pathname]);
 
+  return null;
+}
+
+function RoutedHome() {
   return <SiteLayout><HomePage /></SiteLayout>;
 }
 
@@ -41,6 +44,7 @@ function NotFound() {
 export function App() {
   return (
     <BrowserRouter>
+      <SectionScroll />
       <Routes>
         <Route path={routes.inicio} element={<RoutedHome />} />
         <Route path="/inicio" element={<Navigate to={routes.inicio} replace />} />
