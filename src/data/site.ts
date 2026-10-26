@@ -1,10 +1,10 @@
 export const routes = {
   inicio: '/',
-  servicios: '/servicios',
-  equipo: '/equipo',
-  proyectos: '/proyectos',
-  preguntasFrecuentes: '/preguntas-frecuentes',
-  contacto: '/contacto',
+  servicios: '/#servicios',
+  equipo: '/#equipo',
+  proyectos: '/#proyectos',
+  preguntasFrecuentes: '/#preguntas-frecuentes',
+  contacto: '/#contacto',
 } as const;
 
 export const navigation = [

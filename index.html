@@ -4,12 +4,32 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Kanaro Studio es un estudio creativo en Lima que une estrategia, diseño y tecnología para construir marcas, experiencias digitales y soluciones que hacen crecer tu negocio." />
-		<title>Kanaro Studio</title>
+		<title>Kanaro Studio | Branding, páginas web y marketing en Lima</title>
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="Kanaro Studio" />
-		<meta property="og:title" content="Kanaro Studio" />
+		<meta property="og:title" content="Kanaro Studio | Branding, páginas web y marketing en Lima" />
 		<meta property="og:description" content="Estrategia, diseño y tecnología para crear marcas y experiencias digitales que crecen contigo." />
 		<link rel="icon" type="image/webp" href="/assets/kanarostudio_favicon.webp" />
+		<style>
+			#root > .initial-loader {
+				min-height: 100vh;
+				min-height: 100svh;
+				display: grid;
+				place-items: center;
+				background: #fff;
+			}
+			.initial-loader img {
+				width: 64px;
+				height: 64px;
+				animation: kanaro-loader-spin 1.1s linear infinite;
+			}
+			@keyframes kanaro-loader-spin {
+				to { transform: rotate(360deg); }
+			}
+			@media (prefers-reduced-motion: reduce) {
+				.initial-loader img { animation: none; }
+			}
+		</style>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -18,7 +38,7 @@
 		/>
 	</head>
 	<body>
-		<div id="root"><p>Cargando Kanaro Studio…</p></div>
+		<div id="root"><div class="initial-loader" role="status" aria-label="Cargando Kanaro Studio"><img src="/kanarostudio_favicon.webp" alt="" width="64" height="64" /></div></div>
 		<script type="module" src="/src/main.tsx"></script>
 	</body>
 </html>

@@ -18,11 +18,11 @@ export function HeroSection() {
           </SectionLink>
         </div>
       </div>
-      <div className="hero-highlights" aria-hidden="true">
-        <span className="hero-highlight">1</span>
-        <span className="hero-highlight">2</span>
-        <span className="hero-highlight">3</span>
-        <span className="hero-highlight">4</span>
+      <div className="hero-highlights">
+        <span className="hero-highlight">Branding &amp; Identidad</span>
+        <span className="hero-highlight">Web &amp; Landing</span>
+        <span className="hero-highlight">Social Media</span>
+        <span className="hero-highlight">Sistemas &amp; Automatización</span>
       </div>
     </section>
   );

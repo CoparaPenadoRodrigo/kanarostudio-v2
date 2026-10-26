@@ -130,13 +130,13 @@ a {
 
 .main-nav a:hover,
 .main-nav a:focus-visible,
-.main-nav a[aria-current='page'] {
+.main-nav a[aria-current='location'] {
 	color: var(--orange);
 }
 
 .main-nav a:hover::after,
 .main-nav a:focus-visible::after,
-.main-nav a[aria-current='page']::after,
+.main-nav a[aria-current='location']::after,
 .service-card a:hover::after,
 .service-card a:focus-visible::after {
 	transform: scaleX(1);
@@ -244,12 +244,14 @@ section[id] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-inline: 8px;
 	border-radius: 45px;
 	background: #FFF;
 	box-shadow: 0 4px 37.3px 0 rgba(21, 23, 84, 0.08);
 	color: #51476f;
 	font-size: 14px;
 	font-weight: 600;
+	text-align: center;
 	animation: hero-highlight-float 5s ease-in-out infinite;
 }
 
@@ -259,14 +261,14 @@ section[id] {
 }
 
 .hero-highlight:nth-child(2) {
-	top: calc(100% + 2px);
-	left: max(2%, calc(50% - 535px));
+	top: 20px;
+	right: max(2%, calc(50% - 565px));
 	animation-delay: -2.3s;
 }
 
 .hero-highlight:nth-child(3) {
-	top: 20px;
-	right: max(2%, calc(50% - 565px));
+	top: calc(100% + 2px);
+	left: max(2%, calc(50% - 535px));
 	animation-delay: -1.2s;
 }
 
@@ -1348,6 +1350,7 @@ p {
 
 	.hero-highlight {
 		width: 160px;
+		font-size: 12px;
 	}
 
 	.brand,
@@ -1409,6 +1412,7 @@ p {
 		position: static;
 		width: min(202px, 100%);
 		justify-self: center;
+		font-size: clamp(10px, 2vw, 13px);
 	}
 
 	.hero-highlight:nth-child(2),

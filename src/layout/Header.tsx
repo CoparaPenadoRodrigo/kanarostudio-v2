@@ -4,7 +4,7 @@ import { SectionLink } from '../components/SectionLink';
 import { navigation, routes } from '../data/site';
 
 export function Header() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 12);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -23,7 +23,7 @@ export function Header() {
 
   useEffect(() => {
     setIsMenuOpen(false);
-  }, [pathname]);
+  }, [pathname, hash]);
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -51,7 +51,7 @@ export function Header() {
       </button>
       <nav className="main-nav" id="main-navigation" aria-label="Navegación principal">
         {navigation.map(({ label, to }) => (
-          <SectionLink key={to} to={to} aria-current={pathname === to ? 'page' : undefined} onClick={() => setIsMenuOpen(false)}>
+          <SectionLink key={to} to={to} aria-current={pathname === '/' && `/${hash}` === to ? 'location' : undefined} onClick={() => setIsMenuOpen(false)}>
             {label}
           </SectionLink>
         ))}

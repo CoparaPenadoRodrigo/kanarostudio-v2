@@ -5,22 +5,20 @@ import { SiteLayout } from '../layout/SiteLayout';
 import { HomePage } from './HomePage';
 
 function SectionScroll() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const hasMounted = useRef(false);
 
   useEffect(() => {
+    if (pathname !== routes.inicio) return;
     const behavior = hasMounted.current && !window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto';
     hasMounted.current = true;
     const scrollToSection = () => {
-      if (pathname === routes.inicio) {
-        window.scrollTo({ top: 0, behavior });
-      } else {
-        document.getElementById(pathname.slice(1))?.scrollIntoView({ behavior });
-      }
+      if (hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({ behavior });
+      else window.scrollTo({ top: 0, behavior });
     };
     const frame = requestAnimationFrame(scrollToSection);
     return () => cancelAnimationFrame(frame);
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }
@@ -48,11 +46,11 @@ export function App() {
       <Routes>
         <Route path={routes.inicio} element={<RoutedHome />} />
         <Route path="/inicio" element={<Navigate to={routes.inicio} replace />} />
-        <Route path={routes.servicios} element={<RoutedHome />} />
-        <Route path={routes.equipo} element={<RoutedHome />} />
-        <Route path={routes.proyectos} element={<RoutedHome />} />
-        <Route path={routes.preguntasFrecuentes} element={<RoutedHome />} />
-        <Route path={routes.contacto} element={<RoutedHome />} />
+        <Route path="/servicios" element={<Navigate to={routes.servicios} replace />} />
+        <Route path="/equipo" element={<Navigate to={routes.equipo} replace />} />
+        <Route path="/proyectos" element={<Navigate to={routes.proyectos} replace />} />
+        <Route path="/preguntas-frecuentes" element={<Navigate to={routes.preguntasFrecuentes} replace />} />
+        <Route path="/contacto" element={<Navigate to={routes.contacto} replace />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
