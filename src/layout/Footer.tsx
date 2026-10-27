@@ -1,4 +1,5 @@
 import { SectionLink } from '../components/SectionLink';
+import { WhatsAppLink } from '../components/WhatsAppLink';
 import { footerNavigation, routes, socialLinks } from '../data/site';
 import './Footer.css';
 
@@ -27,7 +28,7 @@ export function Footer() {
         <div className="footer-column">
           <h3>Hablemos</h3>
           <a href="mailto:contacto@kanarostudio.com">contacto@kanarostudio.com</a>
-          <a href="tel:+51992934447">+51 992 934 447</a>
+          <WhatsAppLink message="Hola, equipo Kanaro. Vi su número en la web y quisiera hacer una consulta.">+51 957 076 122</WhatsAppLink>
           <span>Lima Perú</span>
         </div>
         <div className="footer-idea-card">

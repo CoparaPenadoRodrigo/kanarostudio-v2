@@ -14,7 +14,7 @@ export function ProjectsSection() {
     <section className="projects" id="proyectos" aria-labelledby="projects-title">
       <div className="projects-heading" data-reveal>
         <SectionLabel>Ideas que ya cobraron vida <img src="/assets/section-dot.svg" alt="" /></SectionLabel>
-        <h2 id="projects-title">NUESTRO TRABAJO </h2>
+        <h2 id="projects-title">Nuestro trabajo</h2>
         <p>Proyectos de branding, contenido, páginas web, landing pages y soluciones digitales que hemos construido junto a nuestros clientes.</p>
       </div>
       <div className="project-grid" data-reveal>

@@ -22,13 +22,13 @@ export const footerNavigation: { label: string; to: string }[] = [
   { label: 'Contacto', to: routes.contacto },
 ];
 
-export const clients = [
+export const clients: { name: string; image: string; compact?: boolean; extraCompact?: boolean }[] = [
   { name: 'Agencia Startgo', image: new URL('../../img/agenciastartgo_kanarostudio.webp', import.meta.url).href },
-  { name: 'Club Deportivo El Golazo', image: new URL('../../img/clubdepotivoelgolazo_kanarostudio.png', import.meta.url).href },
-  { name: 'Keit Estética Spa', image: new URL('../../img/keitsteticaspa_kanarostudio.webp', import.meta.url).href },
-  { name: 'Leyder Núñez', image: new URL('../../img/leydernuñez_kanarostudio.webp', import.meta.url).href },
-  { name: 'Luisa Abanto Coach', image: new URL('../../img/luisabantocoach_kanarostudio.webp', import.meta.url).href },
-  { name: 'Mariluz Ingbrigtson', image: new URL('../../img/mariluzbrigtson_kanarostudio.webp', import.meta.url).href },
+  { name: 'Club Deportivo El Golazo', image: new URL('../../img/clubdepotivoelgolazo_kanarostudio.png', import.meta.url).href, compact: true },
+  { name: 'Keit Estética Spa', image: new URL('../../img/keitsteticaspa_kanarostudio.webp', import.meta.url).href, compact: true, extraCompact: true },
+  { name: 'Leyder Núñez', image: new URL('../../img/leydernuñez_kanarostudio.webp', import.meta.url).href, compact: true },
+  { name: 'Luisa Abanto Coach', image: new URL('../../img/luisabantocoach_kanarostudio.webp', import.meta.url).href, compact: true },
+  { name: 'Mariluz Ingbrigtson', image: new URL('../../img/mariluzbrigtson_kanarostudio.webp', import.meta.url).href, compact: true },
   { name: 'Sommedics Gram', image: new URL('../../img/sommedicsgram_kanarostudio.webp', import.meta.url).href },
 ];
 

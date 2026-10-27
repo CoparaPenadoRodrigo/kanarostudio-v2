@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { SectionLabel } from '../components/SectionLabel';
-import { SectionLink } from '../components/SectionLink';
-import { routes, services } from '../data/site';
+import { WhatsAppLink } from '../components/WhatsAppLink';
+import { services } from '../data/site';
 
 const cloneCount = 4;
 const carouselItems = [
@@ -101,7 +101,7 @@ export function ServicesSection() {
               <span className="service-icon"><img src={`/assets/${icon}`} alt="" /></span>
               <h3>{title}</h3>
               <p>{description}</p>
-              <SectionLink to={routes.contacto} tabIndex={isClone ? -1 : undefined}>{cta} <img src="/assets/arrow-small.svg" alt="" /></SectionLink>
+              <WhatsAppLink message={`Hola, equipo Kanaro. ${cta}. Quisiera conversar sobre mi proyecto.`} tabIndex={isClone ? -1 : undefined} onClick={(event) => event.stopPropagation()}>{cta} <img src="/assets/arrow-small.svg" alt="" /></WhatsAppLink>
             </article>
           ))}
         </div>
@@ -124,7 +124,7 @@ export function ServicesSection() {
       </div>
       <div className="services-closer" data-reveal>
         <p>Cuéntanos qué quieres construir.<br />Te ayudamos a encontrar <strong>la mejor forma de hacerlo realidad.</strong></p>
-        <SectionLink className="button" to={routes.contacto}>Quiero contarles mi proyecto <img src="/assets/arrow-right.svg" alt="" /></SectionLink>
+        <WhatsAppLink className="button" message="Hola, equipo Kanaro. Quiero contarles sobre mi proyecto y explorar cómo hacerlo realidad.">Quiero contarles mi proyecto <img src="/assets/arrow-right.svg" alt="" /></WhatsAppLink>
       </div>
     </section>
   );

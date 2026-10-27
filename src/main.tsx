@@ -1,6 +1,5 @@
 import { createRoot } from 'react-dom/client';
 import { App } from './app/App';
-import 'lenis/dist/lenis.css';
 import './styles.css';
 
 const root = document.getElementById('root');

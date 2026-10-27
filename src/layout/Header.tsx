@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
 import { SectionLink } from '../components/SectionLink';
+import { WhatsAppLink } from '../components/WhatsAppLink';
 import { navigation, routes } from '../data/site';
 
 export function Header() {
@@ -55,13 +56,13 @@ export function Header() {
             {label}
           </SectionLink>
         ))}
-        <SectionLink className="mobile-nav-contact" to={routes.contacto} onClick={() => setIsMenuOpen(false)}>
+        <WhatsAppLink className="mobile-nav-contact" message="Hola, equipo Kanaro. Visité su web y me gustaría conversar sobre mi proyecto." onClick={() => setIsMenuOpen(false)}>
           Contáctanos
-        </SectionLink>
+        </WhatsAppLink>
       </nav>
-      <SectionLink className="button button-small" to={routes.contacto}>
+      <WhatsAppLink className="button button-small" message="Hola, equipo Kanaro. Visité su web y me gustaría conversar sobre mi proyecto.">
         Contáctanos <img src="/assets/arrow-right.svg" alt="" />
-      </SectionLink>
+      </WhatsAppLink>
     </header>
   );
 }

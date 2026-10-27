@@ -1,3 +1,5 @@
+import { WhatsAppLink } from '../components/WhatsAppLink';
+
 export function ContactSection() {
   return (
     <section className="contact-section" id="contacto">
@@ -6,7 +8,7 @@ export function ContactSection() {
           <h2>Si llegaste hasta aquí,<br />probablemente <strong>tienes algo que contarnos.</strong></h2>
           <p>Nos encantará poner nuestras tres piezas en juego.</p>
         </div>
-        <a className="button button-light" href="mailto:contacto@kanarostudio.com">Agendemos una reunión</a>
+        <WhatsAppLink className="button button-light" message="Hola, equipo Kanaro. Me gustaría agendar una reunión para conversar sobre mi proyecto.">Agendemos una reunión</WhatsAppLink>
         <img className="contact-texture" src="/assets/impact-section.png" alt="" />
       </div>
     </section>

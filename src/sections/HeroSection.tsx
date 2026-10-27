@@ -1,5 +1,4 @@
-import { SectionLink } from '../components/SectionLink';
-import { routes } from '../data/site';
+import { WhatsAppLink } from '../components/WhatsAppLink';
 
 export function HeroSection() {
   return (
@@ -13,9 +12,9 @@ export function HeroSection() {
           Estrategia, diseño y tecnología para transformar el valor de tu marca o negocio en experiencias y soluciones que conectan, funcionan y están hechas para crecer.
         </p>
         <div className="hero-actions">
-          <SectionLink className="button" to={routes.contacto}>
+          <WhatsAppLink className="button" message="Hola, equipo Kanaro. Quiero hacer crecer mi marca y conversar sobre estrategia, diseño o tecnología.">
             Hablemos de tu proyecto <img src="/assets/arrow-right.svg" alt="" />
-          </SectionLink>
+          </WhatsAppLink>
         </div>
       </div>
       <div className="hero-highlights">

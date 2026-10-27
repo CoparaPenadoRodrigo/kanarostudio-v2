@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { SectionLink } from '../components/SectionLink';
-import { frictionPoints, routes } from '../data/site';
+import { WhatsAppLink } from '../components/WhatsAppLink';
+import { frictionPoints } from '../data/site';
 
 function TypedRecommendation({ text }: { text: string }) {
   const [visibleLength, setVisibleLength] = useState(0);
@@ -31,6 +31,9 @@ function TypedRecommendation({ text }: { text: string }) {
 
 export function FrictionSection() {
   const [selected, setSelected] = useState<number[]>([]);
+  const message = selected.length
+    ? `Hola, equipo Kanaro. Quiero dar el primer paso con mi negocio. Me identifico con estas situaciones: ${selected.map((index) => frictionPoints[index].problem).join(' ')} ¿Podemos conversar?`
+    : 'Hola, equipo Kanaro. Quiero dar el primer paso con mi negocio y saber cómo pueden ayudarme.';
 
   function togglePoint(index: number) {
     setSelected((current) => current.includes(index)
@@ -64,9 +67,9 @@ export function FrictionSection() {
           })}
         </ul>
         <p className="friction-close">Si marcaste más de una…<br /><strong>es momento de hacer algo al respecto.</strong></p>
-        <SectionLink className="button" to={routes.contacto}>
+        <WhatsAppLink className="button" message={message}>
           Quiero dar el primer paso <img src="/assets/arrow-right-alt.svg" alt="" />
-        </SectionLink>
+        </WhatsAppLink>
       </div>
     </section>
   );
